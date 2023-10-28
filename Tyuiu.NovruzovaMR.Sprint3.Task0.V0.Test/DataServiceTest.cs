@@ -11,7 +11,7 @@ namespace Tyuiu.NovruzovaMR.Sprint3.Task0.V0.Test
         [TestMethod]
         public void ValidGetSumSeries()
         {
-            DataServiceTest ds = new DataService();
+            DataService ds = new DataService();
 
             double value = 5;
             int startValue = 1;
