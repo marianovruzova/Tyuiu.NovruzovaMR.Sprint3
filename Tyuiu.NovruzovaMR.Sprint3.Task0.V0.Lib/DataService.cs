@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 using tyuiu.cources.programming.interfaces.Sprint3;
 
-namespace Tyuiu.NovruzovaMR.Sprint3.Task0.V0.Lib
+namespace Tyuiu.NovruzovaMR.Sprint3.Task0.V22.Lib
 {
-    public class DataService : ISprint3Task0V0
+    public class DataService : ISprint3Task0V22
     {
-        public double GetSumSeries(double value, int startValue, int stopValue)
+        public double GetMultiplySeries(double value, int startValue, int stopValue)
         {
-            double sumSeries = 0;
-            int i;
-            for (i = startValue; 1 <= stopValue; i++)
+            double res = 1;
+            for (int i = startValue; i <= stopValue; i++)
             {
-                sumSeries = sumSeries + ((1 / Math.Sin(i)) + value);
+                res *= (Math.Pow(value, i) + 4) * Math.Cos(value);
             }
-            return Math.Round(sumSeries, 3);
+            return Math.Round(res, 3);
         }
     }
 }

@@ -1,27 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-using Tyuiu.NovruzovaMR.Sprint3.Task0.V0.Lib;
+using Tyuiu.NovruzovaMR.Sprint3.Task0.V22.Lib;
 
-namespace Tyuiu.NovruzovaMR.Sprint3.Task0.V0.Test
+namespace Tyuiu.NovruzovaMR.Sprint3.Task0.V22.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidGetSumSeries()
+        public void ValidGetMultiplySeries()
         {
             DataService ds = new DataService();
-
-            double value = 5;
-            int startValue = 1;
-            int stopValue = 10;
-
-            double res = ds.GetSumSeries(value, startValue, stopValue);
-
-            double wait = 56.552;
-
-            Assert.AreEqual(wait, res);
+            double a = 0.25;
+            int start = 1;
+            int stop = 8;
+            Assert.AreEqual(55217.446, ds.GetMultiplySeries(a, start, stop));
         }
     }
 }
